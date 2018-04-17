@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Mongoose Dash</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Add a New Muppet!</h1>
+            <br>
+            <img id="animal" src="/static/beaker.jpg">
+            <br>
+
+            <form action='/muppets' method="post">
+
+            <label for="name">Your Muppet's Name: </label>
+            <input type='text' name="name" id="name">
+            <br>
+            <label for="favorite_hobby">Their Favorite Hobby: </label>
+            <input type='text' name="favorite_hobby" id="favorite_hobby">
+            <br>
+            <input type="submit" value="Submit My Muppet!">
+            </form>
+            <!-- <a href="/"><p>Go back to see your!</p></a> -->
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Mongoose Dash</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>The Muppets!!!</h1>
+            <img id="animal" src="/static/Animal.png">
+            <h3>Here are all the Muppets that have been submitted so far...</h3>
+            <ul>
+                <% muppets.forEach(function(muppet) { %>
+                <li><a href="/muppets/<%= muppet._id %>"><%= muppet.name %></a> - <%= muppet.favorite_hobby %><a href="/muppets/destroy/<%= muppet._id %>"> <sub><sup>Delete</sub></sup></a><a href="/muppets/edit/<%= muppet._id %>">/<sub><sup>Edit</sub></sup> </a></li>
+                <% }); %>
+            </ul>
+
+            <a href="/muppets/new">Add a New Muppet!</a>
+        </div>
+    </body>
+</html>

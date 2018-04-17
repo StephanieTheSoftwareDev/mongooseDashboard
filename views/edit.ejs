@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Edit Your Muppet</title>
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Edit Your Muppet!</h1>
+            <br>
+            
+            <h3><%= muppets[0].name %></h3>
+            <img id="animal" src="/static/beaker.jpg">
+            <br>
+
+            <form action='/muppets/<%= muppets[0]._id %>' method="post">
+
+            <label for="name">Your Muppet's New Name: </label>
+            <input type='text' name="name" id="name">
+            <br>
+            <label for="favorite_hobby">Their New Favorite Hobby: </label>
+            <input type='text' name="favorite_hobby" id="favorite_hobby">
+            <br>
+            <input type="submit" value="Submit My Changes!">
+            </form>
+            <!-- <a href="/"><p>Go back to see your!</p></a> -->
+        </div>
+    </body>
+</html>
